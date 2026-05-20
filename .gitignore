@@ -1,0 +1,46 @@
+# Environment / secrets
+.env
+*.env.local
+*.local
+
+# Runtime data (preserve dir for docker bind mount)
+data/*
+!data/.gitkeep
+reports/*.md
+!reports/template.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+.vite/
+
+# Logs
+*.log
+
+# IDEs / tooling
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

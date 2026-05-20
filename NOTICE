@@ -1,0 +1,20 @@
+GARE - Ghidra Agentic RE Pipeline
+Copyright 2026 Justin Phillips
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+A copy of the License is provided in the file `LICENSE`, or at
+http://www.apache.org/licenses/LICENSE-2.0.
+
+This product depends on, but does not bundle, the following components:
+
+  - Ghidra (https://github.com/NationalSecurityAgency/ghidra)
+    Apache License 2.0
+    Copyright the National Security Agency
+    Downloaded at container build time; not redistributed in source form.
+
+  - PyGhidra, JPype1, FastAPI, Uvicorn, Pydantic, Anthropic SDK,
+    OpenAI SDK, MCP SDK, Jinja2, python-docx, Requests, sse-starlette,
+    React, React-DOM, React-Router, react-markdown, Vite, TypeScript
+    Installed via pip / npm at build time. Each is governed by its own
+    license; see the respective project for terms.

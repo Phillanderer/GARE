@@ -1,0 +1,37 @@
+# Simple 2-container setup
+# Backend contains: API, Worker, MCP Server, Agent (all in one container)
+# WebUI: React frontend
+
+name: gare
+
+services:
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: gare-backend
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    env_file:
+      - ../config/.env
+    environment:
+      - DATA_DIR=/app/data
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - WORKER_URL=http://localhost:8001
+    volumes:
+      - ../data:/app/data
+    restart: unless-stopped
+
+  webui:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: gare-webui
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
