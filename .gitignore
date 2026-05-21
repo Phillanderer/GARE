@@ -31,9 +31,11 @@ node_modules/
 # Logs
 *.log
 
-# IDEs / tooling
+# IDEs / agent tooling
 .vscode/
 .idea/
+# AI-agent project-context file (e.g. for the assistant family whose CLI auto-loads this)
+[Cc][Ll][Aa][Uu][Dd][Ee].md
 *.swp
 *.swo
 *~
