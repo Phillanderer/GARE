@@ -1,3 +1,5 @@
+Published by: Justin Phillips
+
 # GARE - Ghidra Agentic RE Pipeline
 
 Automated binary reverse engineering system combining Ghidra's static analysis with LLM-driven autonomous reasoning via Model Context Protocol (MCP) tool calling.
